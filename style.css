@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(30, 31, 38);
+}
+
+.message{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.message__content{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #de10f7;
+    font-size: 3em;
+    padding: .8em;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.message__letter{
+    display: inline-block;
+    transition: all 500ms;
+    margin-right: .5rem;
+}
+
+@keyframes fromTopToBottom{
+    from{
+        transform: translateY(-500px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes movMessage{
+    from{
+        transform: translate(-500%,-500%);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes animateImg{
+    from{
+        transform: scale(0) rotate(0);
+    }
+    to{
+        transform: scale(1) rotate(360deg);
+    }
+}
